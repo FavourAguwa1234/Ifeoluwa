@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I’m Sorry Ifeoluwa 💙</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .bounce-in {
+      animation: bounceIn 1.2s ease-out forwards;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-[#001F3F]">
+  <div class="text-center text-white px-4">
+    <h1 class="text-3xl sm:text-5xl font-bold fade-in">
+      I am sorry <br>
+      <span id="name" class="text-sky-400 inline-block mt-2 opacity-0">Ifeoluwa??</span>
+    </h1>
+  </div>
+
+  <script>
+    // Animate "Ifeoluwa" after short delay
+    window.addEventListener("load", () => {
+      const name = document.getElementById("name");
+      setTimeout(() => {
+        name.classList.add("bounce-in");
+        name.classList.remove("opacity-0");
+      }, 700); // delay for smooth entry
+    });
+  </script>
+</body>
+</html>
